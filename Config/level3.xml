@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Level>
+  <!-- NPC Layout for Game 	-->
+  <GameAsset name="Barrel" x="350.0f" y="200.0f" angle="-180.0f"/>
+  <GameAsset name="Barrel" x="400.0f" y="50.0f" angle="0.0f"/>
+  <GameAsset name="Barrel" x="500.0f" y="200.0f" angle="270.0f"/>
+  <GameAsset name="Barrel" x="350.0f" y="10.0f" angle="270.0f"/>
+  <GameAsset name="Barrel" x="400.0f" y="500.0f" angle="270.0f"/>
+  <GameAsset name="Barrel" x="454.0f" y="400.0f" angle="270.0f"/>
+  <GameAsset name="Rock" x ="360" y ="170" angle ="30"/>
+  <GameAsset name="Rock" x ="400" y ="400" angle ="30"/>
+  <GameAsset name="Rock" x ="300" y ="200" angle ="30"/>
+  <GameAsset name ="Dock" x ="450" y ="450" angle ="10"/>
+  <LeftPoint x="100" y="0"/>
+  <LeftPoint x="250" y="300.0f"/>
+  <LeftPoint x="300" y="600.0f"/>
+  <RightPoint x="400.0f" y="0.0f"/>
+  <RightPoint x="600.0f" y="300.0f"/>
+  <RightPoint x ="700.0f" y ="600.0f"/>""
+</Level>

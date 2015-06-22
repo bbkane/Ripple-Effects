@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Level>
+  <LeftBank>
+    <point x ="200.0f" y ="0.0f"/>
+    <point x ="400.0f" y ="400.0f"/>
+    <point x ="100.0f" y="600.0f"/>
+  </LeftBank>
+  <RightBank>
+    <point x="600.0f" y="0.0f"/>
+    <point x="600.0f" y="300.0f"/>
+    <point x ="500.0f" y ="600.0f"/>
+  </RightBank>
+  <Actors>
+    <Actor name="Barrel" x="0.0f" y="140.0f" angle="90.0f"/>
+    <Actor name="Barrel" x="400.0f" y="200.0f" angle ="60.0f"/>
+    <Actor name="Barrel" x="300.0f" y="500.0f" angle ="56.0f"/>
+  </Actors>
+</Level>

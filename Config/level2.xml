@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Level>
+  <!-- NPC Layout for Game 	-->
+  <GameAsset name="Rock" x ="360" y ="170" angle ="30"/>
+  <GameAsset name="Rock" x ="300" y ="500" angle ="30"/>
+  <GameAsset name="Dock" x ="400" y ="400" angle ="0"/>
+  <LeftPoint x="100" y="0"/>
+  <LeftPoint x="350" y="300.0f"/>
+  <LeftPoint x="100" y="600.0f"/>
+  <RightPoint x="400.0f" y="0.0f"/>
+  <RightPoint x="400.0f" y="300.0f"/>
+  <RightPoint x ="700.0f" y ="600.0f"/>""
+</Level>
