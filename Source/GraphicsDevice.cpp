@@ -14,6 +14,10 @@
 #include "SDL2_gfx-1.0.1/SDL2_gfxPrimitives.h"
 #include "Definitions.h"
 #include <array>
+
+//Test font here
+const char * fontName = "./Assets/Fonts/Verdana.ttf";
+
 GraphicsDevice::GraphicsDevice(Uint32 width, Uint32 height) : SCREEN_WIDTH(width), SCREEN_HEIGHT(height)
 {
 	screen = NULL;
@@ -57,7 +61,7 @@ bool GraphicsDevice::Initialize(bool fullScreen)
 		printf( "SDL_ttf could not initialize! SDL_Error: %s\n", TTF_GetError() );
 		return(false);
 	}
-	font = TTF_OpenFont( "./Assets/Fonts/impact.ttf", 48 );
+	font = TTF_OpenFont( fontName, 48 );
     if( font == NULL )
 	{
         printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );
