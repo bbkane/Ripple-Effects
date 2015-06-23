@@ -11,7 +11,7 @@
 
 #include<iostream>
 #include "GraphicsDevice.h"
-#include "SDL2_gfx-1.0.1\SDL2_gfxPrimitives.h"
+#include "SDL2_gfx-1.0.1/SDL2_gfxPrimitives.h"
 #include "Definitions.h"
 #include <array>
 GraphicsDevice::GraphicsDevice(Uint32 width, Uint32 height) : SCREEN_WIDTH(width), SCREEN_HEIGHT(height)

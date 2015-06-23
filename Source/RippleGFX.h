@@ -1,15 +1,13 @@
 #ifndef RIPPLE_GFX_H
 #define RIPPLE_GFX_H
 
+#include <SDL.h>
 #include"Component.h"
 class Actor;
 class GraphicsDevice;
 class CircleRGBA;
 class View;
 class MusicAssetLibrary;
-
-typedef signed __int16 Sint16; //copying from SDL
-typedef unsigned __int32 Uint32;
 
 class RippleGFX : public Component
 {

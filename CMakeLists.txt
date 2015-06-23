@@ -13,24 +13,60 @@ project(Ripple_Effects)
 
 # Find SDL2
 set(SDL2_HOME "${CMAKE_SOURCE_DIR}/Dynamic-Libraries/SDL2-2.0.3")
-find_path(SDL2_INCLUDE_DIR SDL.h PATHS "${SDL2_HOME}/include")
-find_library(SDL2_LIBRARY NAMES SDL2 PATHS "${SDL2_HOME}/lib/x86/" NO_DEFAULT_PATH)
-find_library(SDL2MAIN_LIBRARY NAMES SDL2main PATHS "${SDL2_HOME}/lib/x86/" NO_DEFAULT_PATH)
+find_path(SDL2_INCLUDE_DIR SDL.h 
+    PATHS 
+    "${SDL2_HOME}/include"
+    "/usr/local/include/SDL2"
+)
+find_library(SDL2_LIBRARY NAMES SDL2 
+    PATHS 
+    "${SDL2_HOME}/lib/x86/"
+    "/usr/local/lib"
+)
+find_library(SDL2MAIN_LIBRARY NAMES SDL2main
+    PATHS 
+    "${SDL2_HOME}/lib/x86/"
+    "/usr/local/lib"
+)
 
 # SDL2_image
 set(SDL2_IMAGE_HOME "${CMAKE_SOURCE_DIR}/Dynamic-Libraries/SDL2_image-2.0.0")
-find_path(SDL2_IMAGE_INCLUDE_DIR SDL_image.h PATHS "${SDL2_IMAGE_HOME}/include")
-find_library(SDL2_IMAGE_LIBRARY NAMES SDL2_image PATHS "${SDL2_IMAGE_HOME}/lib/x86")
+find_path(SDL2_IMAGE_INCLUDE_DIR SDL_image.h 
+    PATHS 
+    "${SDL2_IMAGE_HOME}/include"
+    "/usr/local/include/SDL2"
+)
+find_library(SDL2_IMAGE_LIBRARY NAMES SDL2_image 
+    PATHS 
+    "${SDL2_IMAGE_HOME}/lib/x86"
+    "/usr/local/lib"
+)
 
 # SDL2_mixer
 set(SDL2_MIXER_HOME "${CMAKE_SOURCE_DIR}/Dynamic-Libraries/SDL2_mixer-2.0.0")
-find_path(SDL2_MIXER_INCLUDE_DIR SDL_mixer.h PATHS "${SDL2_MIXER_HOME}/include")
-find_library(SDL2_MIXER_LIBRARY NAMES SDL2_mixer PATHS "${SDL2_MIXER_HOME}/lib/x86")
+find_path(SDL2_MIXER_INCLUDE_DIR SDL_mixer.h 
+    PATHS 
+    "${SDL2_MIXER_HOME}/include"
+    "/usr/local/include/SDL2"
+)
+find_library(SDL2_MIXER_LIBRARY NAMES SDL2_mixer 
+    PATHS 
+    "${SDL2_MIXER_HOME}/lib/x86"
+    "/usr/local/lib"
+)
 
 # SDL2_ttf
 set(SDL2_TTF_HOME "${CMAKE_SOURCE_DIR}/Dynamic-Libraries/SDL2_ttf-2.0.12")
-find_path(SDL2_TTF_INCLUDE_DIR SDL_ttf.h PATHS "${SDL2_TTF_HOME}/include")
-find_library(SDL2_TTF_LIBRARY NAMES SDL2_ttf PATHS "${SDL2_TTF_HOME}/lib/x86")
+find_path(SDL2_TTF_INCLUDE_DIR SDL_ttf.h 
+    PATHS 
+    "${SDL2_TTF_HOME}/include"
+    "/usr/local/include/SDL2"
+)
+find_library(SDL2_TTF_LIBRARY NAMES SDL2_ttf 
+    PATHS 
+    "${SDL2_TTF_HOME}/lib/x86"
+    "/usr/local/lib"
+)
 
 # Find static libraries (no dlls).
 # Include with:

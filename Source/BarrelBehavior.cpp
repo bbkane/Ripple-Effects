@@ -2,7 +2,7 @@
 #include"BarrelBehavior.h"
 #include"RigidBody.h"
 #include <iostream>
-#include <Box2D\Common\b2Math.h>
+#include <Box2D/Common/b2Math.h>
 #include <SDL_mixer.h>
 #include "MusicAssetLibrary.h"
 

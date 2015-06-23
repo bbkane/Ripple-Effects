@@ -95,21 +95,27 @@ target_link_libraries(${GAME_NAME}
 	SDL2_gfx
 )
 
+# Compile for C++ 11
+set_property(TARGET ${GAME_NAME} PROPERTY CXX_STANDARD 11)
+set_property(TARGET ${GAME_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
+
+set_target_properties(${GAME_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Game")
+
+# Tell VS where to build the executable for both debug and release versions
+set_target_properties(${GAME_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/Game")
+set_target_properties(${GAME_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/Game")
+
+# Copy Assets where both VS can find them (it doesn't look in the Game folder) and the Game folder
+file(COPY "${CMAKE_SOURCE_DIR}/Assets" DESTINATION ${PROJECT_BINARY_DIR}/Source)
+file(COPY "${CMAKE_SOURCE_DIR}/Assets" DESTINATION ${CMAKE_SOURCE_DIR}/Game)
+
+# Copy Config where both VS can find them (it doesn't look in the Game folder) and the Game folder
+file(COPY "${CMAKE_SOURCE_DIR}/Config" DESTINATION ${PROJECT_BINARY_DIR}/Source)
+file(COPY "${CMAKE_SOURCE_DIR}/Config" DESTINATION ${CMAKE_SOURCE_DIR}/Game)
+
 if(MSVC)
-	# Tell VS where to build the executable for both debug and release versions
-	set_target_properties(${GAME_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/Game")
-	set_target_properties(${GAME_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/Game")
-	
-	# Copy Assets where both VS can find them (it doesn't look in the Game folder) and the Game folder
-	file(COPY "${CMAKE_SOURCE_DIR}/Assets" DESTINATION ${PROJECT_BINARY_DIR}/Source)
-	file(COPY "${CMAKE_SOURCE_DIR}/Assets" DESTINATION ${CMAKE_SOURCE_DIR}/Game)
-	
-	# Copy Config where both VS can find them (it doesn't look in the Game folder) and the Game folder
-	file(COPY "${CMAKE_SOURCE_DIR}/Config" DESTINATION ${PROJECT_BINARY_DIR}/Source)
-	file(COPY "${CMAKE_SOURCE_DIR}/Config" DESTINATION ${CMAKE_SOURCE_DIR}/Game)
-	
 	# Find and copy 32-bit DLLs to Game folder
-	file(GLOB X86_DLL_FILES 
+	file(GLOB X86_DLL_FILES
 			${SDL2_HOME}/lib/x86/*.dll
 			${SDL2_IMAGE_HOME}/lib/x86/*.dll
 			${SDL2_MIXER_HOME}/lib/x86/*.dll

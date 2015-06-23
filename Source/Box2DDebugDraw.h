@@ -2,7 +2,7 @@
 #pragma once
 //so no include guards are needed
 
-#include <Box2D\Box2D.h>
+#include <Box2D/Box2D.h>
 #include "Definitions.h"
 #include "GraphicsDevice.h"
 
