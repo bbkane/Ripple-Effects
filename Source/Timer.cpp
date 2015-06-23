@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "timer.h"
+#include "Timer.h"
 
 Timer::Timer()
 {

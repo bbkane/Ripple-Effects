@@ -17,6 +17,9 @@
 
 #include <string>
 
+// TODO: change this. Linux is complaining...
+// #include <memory>
+
 //Basic Types
 typedef unsigned int	Uint32;
 typedef float			GAME_FLT;

@@ -1,7 +1,7 @@
 #ifndef SPRITE_H
 #define SPRITE_H
 
-#include"Component.h"
+#include "Component.h"
 class Actor;
 class GraphicsDevice;
 class Texture;

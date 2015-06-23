@@ -1,9 +1,9 @@
 #ifndef Actor_H
 #define Actor_H
 
-#include<memory>
-#include<iostream>
-#include<vector>
+#include <memory>
+#include <iostream>
+#include <vector>
 #include "Box2D/Box2D.h"
 #include "Texture.h"
 #include <string>

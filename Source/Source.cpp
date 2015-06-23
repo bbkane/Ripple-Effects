@@ -23,7 +23,7 @@
 #include "InputDevice.h"
 #include "Definitions.h"
 #include "Game.h"
-#include <SDL_Mixer.h>
+#include "SDL_mixer.h"
 
 #include <fstream>
 
