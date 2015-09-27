@@ -147,11 +147,6 @@ void GraphicsDevice::Draw(std::string message, std::vector<b2Vec2> *leftBank, st
 }
 
 void GraphicsDevice::DrawFonts(std::string message) {
-	TTF_Font *font = TTF_OpenFont( "./Assets/Fonts/impact.ttf", 48 );
-    if( font == NULL )
-	{
-        printf( "Failed to load lazy font! SDL_ttf Error: %s\n", TTF_GetError() );
-	}
 
 	SDL_Color textColor = { 255, 255, 51 };
 	SDL_Texture* textSheetTexture = SDL_CreateTextureFromSurface( renderer,  TTF_RenderText_Solid(font, message.c_str(), textColor));
@@ -163,6 +158,7 @@ void GraphicsDevice::DrawFonts(std::string message) {
 
 	//Render to screen
 	SDL_RenderCopy(renderer, textSheetTexture, NULL, &renderQuad );
+        SDL_DestroyTexture(textSheetTexture);
 }
 
 void GraphicsDevice::Present()
